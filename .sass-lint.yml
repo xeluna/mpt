@@ -1,0 +1,21 @@
+rules:
+  force-attribute-nesting: 0
+  force-pseudo-nesting: 0
+  no-url-domains: 0
+  no-url-protocols: 0
+  property-sort-order:
+    - 1
+    -
+      order: concentric
+      ignore_unspecified: false
+      min_properties: 2
+      separate_groups: false
+  nesting-depth:
+    - 1
+    -
+      max-depth: 5
+      ignore_parent_selectors: true
+  no-qualifying-elements:
+    - 1
+    -
+      allow-element-with-attribute: true

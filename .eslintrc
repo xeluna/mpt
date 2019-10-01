@@ -1,0 +1,123 @@
+{
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "plugin:import/react",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "rules": {
+    "array-bracket-newline": "warn",
+    "arrow-body-style": ["warn", "as-needed"],
+    "arrow-parens": ["error", "as-needed"],
+    "class-methods-use-this": "warn",
+    "comma-dangle": ["warn", "never"],
+    "consistent-return": "warn",
+    "import/no-extraneous-dependencies": ["warn", { "devDependencies": true }],
+    "import/prefer-default-export": "warn",
+    "indent": "off", // disable base rule, see @typescript-eslint/indent
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "max-len": ["warn", 120, {
+      "ignoreUrls": true,
+      "ignoreComments": false,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true
+    }],
+    "no-continue": "off",
+    "no-param-reassign": "warn",
+    "no-else-return": "off",
+    "no-multi-spaces": ["error", {
+      "ignoreEOLComments": false,
+      "exceptions": { "VariableDeclarator": true }
+    }],
+    "no-plusplus": "off",
+    "no-restricted-syntax": "warn",
+    "no-restricted-globals": "warn",
+    "no-underscore-dangle": ["warn"],
+    "no-unused-vars": "off", // disable base rule, see @typescript-eslint/no-unused-vars
+    "object-curly-newline": "off",
+    "operator-linebreak": ["error", "before", { "overrides": { "=":"none", "&&": "ignore" } }],
+    "prefer-const": "off",
+    "prefer-stateless-function": "off",
+    "prefer-template": "off",
+    "quote-props": ["error", "consistent-as-needed"],
+    "react/button-has-type": "off",
+    "react/display-name": ["off", { "ignoreTranspilerName": false }],
+    "react/destructuring-assignment": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".jsx", ".tsx"] }],
+    "react/jsx-no-bind": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": ["error", {
+      "custom": "ignore"
+    }],
+    "react/jsx-wrap-multilines": ["error", {
+      "declaration": "parens-new-line",
+      "assignment": "parens-new-line",
+      "return": "parens-new-line",
+      "arrow": "parens-new-line"
+    }],
+    "react/no-array-index-key": "warn",
+    "react/prefer-stateless-function": "off",
+    "react/require-extension": "off",
+    "react/self-closing-comp": "warn",
+    "react/sort-comp": ["error", { 
+      "order": [
+        "static-methods",
+        "instance-variables",
+        "lifecycle",
+        "everything-else",
+        "render",
+        "/^render.+$/"
+      ]}
+    ],
+    "react/static-property-placement": ["error", "static public field"],
+    "semi": "off", // disable base rule, see @typescript-eslint/semi
+    "@typescript-eslint/array-type": ["error", { "default": "generic" }],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/indent": ["warn", 2, { "SwitchCase": 1 }],
+    "@typescript-eslint/no-array-constructor": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "vars": "all", "argsIgnorePattern": "^_", "args": "after-used", "ignoreRestSiblings": true }
+    ],
+    "@typescript-eslint/no-use-before-define": ["error", { "functions": false }],
+    "@typescript-eslint/semi": ["warn"]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/resolver": [
+      "webpack", 
+      {
+        "node": {
+          "extensions": [".mjs", ".js", ".jsx", ".ts", ".tsx", ".d.ts", ".json"],
+          "moduleDirectory": ["node_modules", "src"]
+        }
+      }
+    ],
+    "import/extensions": [".js", ".ts", ".mjs"]
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "jest"
+  ]
+}
