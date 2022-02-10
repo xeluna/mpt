@@ -46,7 +46,7 @@
     "eslint-plugin-jest": "^22.17.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.15.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-lint": "^1.13.1",
     "sass-lint-auto-fix": "^0.17.0",
     "sass-loader": "^8.0.0"
